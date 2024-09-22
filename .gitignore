@@ -1,1 +1,3 @@
 .vscode
+# Ignore compiled C++ executables (files with no extension)
+*.[!c][!p][!p]
