@@ -20,7 +20,7 @@ int main(){
         i = i + 1;
     }
     */
-   int n;
+    int n;
     cin >> n;
 
     int i = 1;

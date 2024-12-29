@@ -19,12 +19,6 @@ int main()
         }
 
         //2nd triangle
-        // int space = 1;
-        // while(space <= n-i)
-        // {
-        //     cout << " ";
-        //     space++;
-        // }
         j = 1;
         int num = 1;
 
@@ -38,12 +32,7 @@ int main()
         //3rd triangle
         num = n+1;
         j = 1;
-        // space = 1;
-        // while (space <= i - 1)
-        // {
-        //     cout << " ";
-        //     space++;
-        // }
+
         while (j <= n - i + 1)
         {
             cout << num - i;

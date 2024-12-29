@@ -9,7 +9,7 @@ int getPivot(vector<int> &arr, int n)
     int e = n - 1;
     int mid = s + (e - s) / 2;
 
-    while (s < e)
+    while (s < e)   
     {
         if (arr[mid] >= arr[0])
         {
@@ -67,5 +67,5 @@ int search(vector<int> &arr, int n, int k)
     }
 }
 int main() {
-    //
+    //dry run it with grap
 }

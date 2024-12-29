@@ -52,7 +52,7 @@ int main()
         // Find 2's compliment of the number
         // 1's comp
         int newAns = (~ans);
-        cout << newAns;
+        // cout << newAns;
         // 2's comp
         newAns = newAns + 1;
         cout << newAns << endl;

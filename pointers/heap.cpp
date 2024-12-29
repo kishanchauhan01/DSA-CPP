@@ -29,6 +29,7 @@ int main(){
     // delete []n;
     while (true)
     {
+        // cout << "hi" << endl;
         int* ptr = new int;
     }
     

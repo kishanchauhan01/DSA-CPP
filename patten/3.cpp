@@ -8,13 +8,11 @@ int main()
 
     int row = 1;
 
-    while (row <= n)
-    {
+    while (row <= n) {
         int col = row;
         // int value = row;
-        while (col < row*2)
-        {
-            cout << col <<" ";
+        while (col < row*2) {
+            cout << col << " ";
             // value = value + 1;
             col = col + 1;
         }

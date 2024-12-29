@@ -8,7 +8,7 @@ using namespace std;
 class Node {
     public:
         int data;
-        Node* next;
+        Node* next;//it is hold the address of the object type Node
 
     //constructor
     Node(int data) {

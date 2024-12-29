@@ -15,14 +15,15 @@ int main(){
     for(int i=0; i<row; i++) {
         arr[i] = new int[col];
     }//creation done
+
     //taking i/p
-    
     for(int i=0; i<row; i++) {
         for(int j=0; j<col; j++) {
             cin >> arr[i][j];
         }
     }
 
+    //printing
     for(int i=0; i<row; i++) {
         for(int j=0; j<col; j++) {
             cout << arr[i][j] << " ";
@@ -30,10 +31,12 @@ int main(){
     }
 
     //relasing the memory
+    //deleting column first
     for(int i=0; i<row; i++) {
         delete [] arr[i];
     }
 
+    //deleting row 
     delete []arr;
     cout << "memory deleted" << endl;
     cout << *arr << endl;

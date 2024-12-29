@@ -14,12 +14,11 @@ int main(){
             cout << " ";
             space++;
         }
-        int j = 1, num = 1;
+        int j = 1;
 
         while(j <= 2*i-1)
         {
             cout << "*";
-            num++;
             j++;
         }
         cout << endl;
