@@ -3,6 +3,8 @@
 using namespace std;
 
 int main(){
+        string s = "pwwkew";
+
         if (s.empty()) {
             return 0;
         }
@@ -20,10 +22,9 @@ int main(){
                 for (int j = 0; j < sub.length(); j++) {
                     char c = sub[j];
 
-                    // Increment the count for this character
                     temp[c]++;
                     if (temp[c] > 1) {
-                        tempLength = 1; // Duplicate character found
+                        tempLength = 1;
                         break;
                     } else {
                         tempLength++;
@@ -39,12 +40,11 @@ int main(){
             }
         }
 
-        return maxLength;
-    }
-
     cout << maxLength << endl;
 
-    return 0;
+    return maxLength;
+
 }
+
 
 
