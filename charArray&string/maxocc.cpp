@@ -16,9 +16,10 @@ char getMaxOcc(string s)
         // lowercase
         int number = 0;
         number = ch - 'a';
-        cout << number << endl;
+        // cout << number << endl;
         arr[number]++;//matlab number vale index pe jo bhi value ho use increment dedo ek se.
     }
+    
     // find maximum occ character
     int maxi = -1, ans = 0;
     for (int i = 0; i < 26; i++)
@@ -28,7 +29,7 @@ char getMaxOcc(string s)
             ans = i;
             maxi = arr[i];
         }
-    }   
+    }
 
     char finalAns = 'a' + ans;
     return finalAns;

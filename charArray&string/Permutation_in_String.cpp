@@ -27,9 +27,12 @@ public:
             i++;
         }
         
-        if( checkEqual(count1, count2)) {
+        
+        
+        if(checkEqual(count1, count2)) {
             return 1;
         }
+
         //aage window process karo
         while(i<s2.length()) {
             char newChar =  s2[i];
