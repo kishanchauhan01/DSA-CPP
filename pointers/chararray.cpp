@@ -28,8 +28,8 @@ int main(){
     po++;
     cout << po << endl;
 
-    char a[10] = "hello";
-    cout << &a << endl;
+    // char a[10] = "hello";
+    // cout << &a << endl;
 
 
     // char *k = "a";

@@ -8,7 +8,7 @@ int main()
 	// system("cls"); 
 
 	int row, col; 
-	row = 3; 
+	row = 3;
 
 	// Create Row Array- dynamic array of pointers 
 	int** arr = new int*[row]; 
@@ -19,6 +19,7 @@ int main()
 	// no of columns for each row as input from user 
 	for (int i = 0; i < row; i++) { 
 		 
+		cout << "enter no. of columns:- " << endl;
 		cin>>col;	 //if col is taken as input 
 		sizes[i]=col; 
 		// store each col number in size ( if row and col 

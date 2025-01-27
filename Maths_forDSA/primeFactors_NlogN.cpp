@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
+//T.C:- O(n(log(n)))
 
 vector<pair<int, int>> primeFactors(int n) {
     vector<pair<int, int>> ans;
