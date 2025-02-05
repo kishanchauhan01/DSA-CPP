@@ -85,15 +85,12 @@ int main(){
     // ramesh.health = 70;
     // ramesh.level = 'A';
 
-    //use setter
+    // // use setter
     // ramesh.setHealth(70);
     // ramesh.setLevel('A');
 
     // cout << "health is: " << ramesh.getHealth() << endl;
     // cout << "level is: " << ramesh.getLevel() << endl;
-
-    //cout << "size:- " << sizeof(h1) << endl;
-
 
     // ----------------------------------------------------------------------------------------------
 
@@ -121,7 +118,7 @@ int main(){
     // cout << "address of ramesh- " << &ramesh << endl;
 
     //dynamically
-    // Hero *b = new Hero(); //new Hero is also work
+    // Hero *b = new Hero/(); //new Hero is also work
 
     //----------------------------------------------------------------------------------------------------
 

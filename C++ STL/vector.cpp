@@ -5,7 +5,11 @@ using namespace std;
 int main(){
     vector<int> v;
     vector<int> a(5,1);//here 5 is size of arr and initalized with 1 by default 0
-    vector<int> last(a)//copy the a vector into last vector
+    vector<int> last(a);//copy the a vector into last vector
+    vector<vector<int>> ans = {{1,2,3,4}, {1,2,3,4}, {1,2,3,4}, {1,2,3,4}};
+    cout << "size of ans" << ans.size() << endl;
+
+
 
     cout << "Capacity of v:- " << v.capacity() << endl;
     v.push_back(1);
