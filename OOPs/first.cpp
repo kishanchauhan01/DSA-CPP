@@ -12,73 +12,73 @@ class Hero{
     public:
         char *name;
         char level;
-        static int timeTocomplete;
+        // static int timeTocomplete;
 
-        Hero() {
-            cout << "constructor called" << endl;
-            name = new char[100];
-        }
+        // Hero() {
+        //     cout << "constructor called" << endl;
+        //     name = new char[100];
+        // }
 
-        Hero(int health, char level) {
-            // cout << "this -> " << this << endl;
-            this -> level = level;
-            this -> health = health;
-        }
+        // Hero(int health, char level) {
+        //     // cout << "this -> " << this << endl;
+        //     this -> level = level;
+        //     this -> health = health;
+        // }
 
-        //!copy constructor
-        Hero(Hero& temp) {
-            //*deep copy
-            char *ch = new char[strlen(temp.name) + 1];
-            strcpy(ch, temp.name);
-            this->name = ch;
-            //*deep copy end here
+        // //!copy constructor
+        // Hero(Hero& temp) {
+        //     //*deep copy
+        //     char *ch = new char[strlen(temp.name) + 1];
+        //     strcpy(ch, temp.name);
+        //     this->name = ch;
+        //     //*deep copy end here
 
-            cout << "Copy constructro called" << endl;
-            this->health = temp.health;
-            this->level = temp.level;
-        }
+        //     cout << "Copy constructro called" << endl;
+        //     this->health = temp.health;
+        //     this->level = temp.level;
+        // }
 
-        void print() {
-            cout<< endl;
-            cout << " [ Name: " << this->name << ",";
-            cout << "Level: " << this->level << ",";
-            cout << "Health: " << this->health << " ]";
-            cout<< endl;
-        }
+        // void print() {
+        //     cout<< endl;
+        //     cout << " [ Name: " << this->name << ",";
+        //     cout << "Level: " << this->level << ",";
+        //     cout << "Health: " << this->health << " ]";
+        //     cout<< endl;
+        // }
 
-        int getHealth() {
-            return health;
-        }
+        // int getHealth() {
+        //     return health;
+        // }
 
-        char getLevel() {
-            return level;
-        }
+        // char getLevel() {
+        //     return level;
+        // }
 
-        void setHealth(int h) {
-            health = h;
-        }
+        // void setHealth(int h) {
+        //     health = h;
+        // }
 
-        void setLevel(char ch) {
-            level = ch;
-        }
+        // void setLevel(char ch) {
+        //     level = ch;
+        // }
 
-        void setName(char name[]) {
-            strcpy(this->name, name);
-        }
+        // void setName(char name[]) {
+        //     strcpy(this->name, name);
+        // }
 
-        ~Hero() {
-            cout << "Destructor bhai called" << endl;
-        }
+        // ~Hero() {
+        //     cout << "Destructor bhai called" << endl;
+        // }
 
 };
 
-int Hero::timeTocomplete = 5;
+// int Hero::timeTocomplete = 5;
 
 
 int main(){
 
     //!creation of Object
-    // Hero ramesh;
+    Hero ramesh;
 
     // cout << "size of ramesh:- " << sizeof(ramesh) << endl;
 
@@ -177,10 +177,10 @@ int main(){
 
     //! static keyword
 
-    cout << Hero::timeTocomplete << endl;
+    // cout << Hero::timeTocomplete << endl;
 
-    Hero a;
-    cout << a.timeTocomplete << endl;
+    // Hero a;
+    // cout << a.timeTocomplete << endl;
 
 
 

@@ -19,7 +19,7 @@ void solve(string str, string output, int index, vector<string>& ans) {
 	cout << "o/p:- before 1st " << output << ' '  << index << endl;
 	solve(str, output, index+1, ans);
 
-	cout << "o/p:- after 1st rc & before 2nd  " << output << ' ' << index << endl;
+	cout << "o/p:- after 1st rc & before 2nd" << output << ' ' << index << endl;
 
 	//include
 	char element = str[index];
