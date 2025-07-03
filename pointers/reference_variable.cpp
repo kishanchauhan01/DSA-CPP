@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
-#include<iostream>
+
+#include <iostream>
 using namespace std;
 
 // int& func(int a) {
@@ -9,25 +10,21 @@ using namespace std;
 //     return ans;
 // }//This is a bed practice because num and ans is local variables
 
-// int* func(int n) {
-//     int* ptr = &n;
-//     cout << ptr << endl;
-//     return *ptr;
-// }
-
-void update2(int& k){
-    k++;
+int* func(int n) {
+    int* ptr = &n;
+    cout << ptr << endl;
+    return ptr;
+    // if wants to return *ptr the actuall value then change int* to int in
+    // function declaration
 }
 
-void update1(int n){
-    n++;
-}
+void update2(int& k) { k++; }
 
-int main(){
-    
-    
-    // int i = 5;
-    // //create a ref variable 
+void update1(int n) { n++; }
+
+int main() {
+    int i = 5;
+    // create a ref variable
 
     // int& j = i;
 
@@ -35,14 +32,13 @@ int main(){
     // i++;
     // cout << i << endl;
     // j++;
-    // cout << j << endl;
-    
+    // cout << i << endl;
 
-    int n =5;
+    int n = 5;
     cout << "Before " << n << endl;
     update2(n);
     cout << "after " << n << endl;
-    
+
     cout << "original n address" << &n << endl;
     cout << func(n) << endl;
     cout << n << endl;

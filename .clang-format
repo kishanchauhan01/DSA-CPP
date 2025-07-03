@@ -6,3 +6,5 @@ AllowShortLoopsOnASingleLine: true
 BreakBeforeBraces: Attach
 AlwaysBreakAfterDefinitionReturnType: None
 SpaceBeforeParens: ControlStatements
+BraceWrapping:
+  AfterFunction: false

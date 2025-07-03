@@ -4,7 +4,7 @@ parent_directroy = "./"
 
 for root, dirs, files in os.walk(parent_directroy):
     for file in files:
-        if file.endswith(".out"):
+        if file.endswith(".exe"):
             file_path = os.path.join(root, file)
             try: 
                 os.remove(file_path)
