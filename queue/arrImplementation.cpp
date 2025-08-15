@@ -1,15 +1,20 @@
-#include <bits/stdc++.h> 
-class Queue {
+#include <bits/stdc++.h>
 
-    int *arr;
+#include <iostream>
+using namespace std;
+
+// https://www.naukri.com/code360/problems/queue-using-array-or-singly-linked-list_2099908
+
+#include <bits/stdc++.h>
+class Queue {
+    int* arr;
     int qfront;
     int rear;
     int size;
 
-public:
+   public:
     Queue() {
-        // Implement the Constructor
-        size = 1000001;
+        size = 10001;
         arr = new int[size];
         qfront = 0;
         rear = 0;
@@ -18,52 +23,41 @@ public:
     /*----------------- Public Functions of Queue -----------------*/
 
     bool isEmpty() {
-        // Implement the isEmpty() function
-        if(qfront == rear) {
+        if (qfront == rear) {
             return true;
+        } else {
+            return false;
         }
-        return false;
-
     }
 
     void enqueue(int data) {
-        // Implement the enqueue() function
-        if(rear == size) {
-            cout << "Queue is full" << endl;
-        }
-        else {
+        if (rear == size) {
+            cout << "full" << endl;
+        } else {
             arr[rear] = data;
             rear++;
         }
-
-
     }
 
     int dequeue() {
-        // Implement the dequeue() function
-        if(qfront == rear) {
+        if (isEmpty()) {
             return -1;
-        }
-        else {
+        } else {
             int ans = arr[qfront];
             arr[qfront] = -1;
             qfront++;
-            if(qfront == rear) {
+            if (qfront == rear) {
                 qfront = 0;
                 rear = 0;
             }
-
             return ans;
-
         }
     }
 
     int front() {
-        // Implement the front() function
-        if(qfront == rear) {
+        if (qfront == rear) {
             return -1;
-        }
-        else {
+        } else {
             return arr[qfront];
         }
     }

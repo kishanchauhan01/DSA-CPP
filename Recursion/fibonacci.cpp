@@ -18,15 +18,15 @@ int main() {
     // cout << "enter the ending point:-" << endl;
     // cin >> m;
     
-    // int ans = fibo(n);//fibo of starting point
+    int ans = fibo(4);//fibo of starting point
 
-    while(n <= 20) {
-        cout << fibo(n) << " ";
-        n++;
-    }
+    // while(n <= 20) {
+    //     cout << fibo(n) << " ";
+    //     n++;
+    // }
     cout << endl;
 
-    // cout << ans1 << endl;
+    cout << ans << endl;
 
 	return 0;
 }

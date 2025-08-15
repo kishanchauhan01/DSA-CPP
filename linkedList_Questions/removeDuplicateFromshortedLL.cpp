@@ -13,11 +13,13 @@ using namespace std;
           this->prev = NULL;
           this->next = NULL;
       }
+      
       Node(int data) {
           this->data = data;
           this->prev = NULL;
           this->next = NULL;
       }
+
       Node (int data, Node *next, Node *prev) {
           this->data = data;
           this->prev = prev;

@@ -49,11 +49,11 @@ int main(){
     // A obj;
     // obj.sayHello();
 
-    // B obj1, obj2;
-    // obj1.a = 4;
-    // obj2.a = 7;
+    B obj1, obj2;
+    obj1.a = 4;
+    obj2.a = 7;
 
-    // obj1 + obj2;
+    obj1 + obj2;
 
     Dog obj;
     obj.speak();//if in Dog class there is no function speak() then parent class function envoked

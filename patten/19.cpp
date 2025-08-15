@@ -15,7 +15,7 @@ int main(){
             space++;
         }
         int j = 1;
-
+ 
         while(j <= 2*i-1)
         {
             cout << "*";

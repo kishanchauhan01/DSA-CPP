@@ -1,16 +1,14 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
+int main() {
     int n;
     cin >> n;
 
     int row = 1, toPrint = 1;
-    while(row <= n)
-    {
+    while (row <= n) {
         int col = 1;
-        while(col <= row)
-        {
+        while (col <= row) {
             cout << toPrint << "";
             toPrint = toPrint + 1;
             col = col + 1;

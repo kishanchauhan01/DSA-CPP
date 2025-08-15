@@ -1,179 +1,179 @@
 #include <bits/stdc++.h>
-#include<iostream>
+
+#include <iostream>
 using namespace std;
 
-
-// The arrow operator -> in C and C++ is used for accessing members (variables, methods) of a structure or class through a pointer. It's specifically applied in scenarios involving dynamic memory allocation, linked lists, and other data structures and instances where objects are accessed through their pointers.
+// The arrow operator -> in C and C++ is used for accessing members (variables,
+// methods) of a structure or class through a pointer. It's specifically applied
+// in scenarios involving dynamic memory allocation, linked lists, and other
+// data structures and instances where objects are accessed through their
+// pointers.
 
 class Node {
-    public:
-        int data;
-        Node* next;//it is hold the address of the object type Node
+   public:
+    int data;
+    Node* next;  // it is hold the address of the object type Node
+    static int size;
 
-    //constructor
+    // constructor
     Node(int data) {
-        this -> data = data;
-        this -> next = NULL;
+        this->data = data;
+        this->next = NULL;
+        size++;
     }
 
-    //destructor
+    // destructor
     ~Node() {
-        int value = this -> data;
-        //memory free
-        if(this->next == NULL) {
+        int value = this->data;
+        // memory free
+        if (this->next == NULL) {
             cout << "in delete if" << endl;
             delete next;
-            this -> next = NULL;
+            this->next = NULL;
         }
         cout << "memory is free for node with data " << value << endl;
     }
-
 };
 
-void insertAtHead(Node* &head, int d) {
+void insertAtHead(Node*& head, int d) {
     Node* temp = new Node(d);
-    temp -> next = head;
+    temp->next = head;
     head = temp;
 }
 
-void insertAtTail(Node* &tail, int d) {
+void insertAtTail(Node*& tail, int d) {
     Node* temp = new Node(d);
-    tail -> next = temp;
-    tail = tail -> next;
+    tail->next = temp;
+    tail = tail->next;
 }
 
-void insertAtPosition(Node* &head, Node* &tail, int position, int d) {
-
-    //inserting at head
-    if(position == 1) {
+void insertAtPosition(Node*& head, Node*& tail, int position, int d) {
+    // inserting at head
+    if (position == 1) {
         insertAtHead(head, d);
         return;
     }
 
-
-
     Node* temp = head;
     int cnt = 1;
 
-    while(cnt < position-1) {
-        temp = temp -> next;
+    while (cnt < position - 1) {
+        temp = temp->next;
         cnt++;
     }
 
-    //inserting at tail
-    if(temp -> next == NULL) {
+    // inserting at tail
+    if (temp->next == NULL) {
         insertAtTail(tail, d);
         return;
     }
 
     Node* nodeToInsert = new Node(d);
 
-    nodeToInsert -> next = temp -> next;
-    temp -> next = nodeToInsert;
-
+    nodeToInsert->next = temp->next;
+    temp->next = nodeToInsert;
 }
 
-void print(Node* &head) {
+void print(Node*& head) {
     Node* temp = head;
 
-    while(temp != NULL) {
-        cout << temp -> data << " ";
-        temp = temp -> next;
+    while (temp != NULL) {
+        cout << temp->data << " ";
+        temp = temp->next;
     }
     cout << endl;
 }
 
-void deleteNode(int position, Node* &head, Node* &tail) {
-
-    //deleting starting node
-    if(position == 1) {
+void deleteNode(int position, Node*& head, Node*& tail) {
+    // deleting starting node
+    if (position == 1) {
         Node* temp = head;
-        head = head -> next;
+        head = head->next;
 
-        temp -> next = NULL;
+        temp->next = NULL;
         delete temp;
-    }
-    else{
-        //deleting any middle node or last node
+        Node::size--;
+    } else {
+        // deleting any middle node or last node
 
         Node* curr = head;
         Node* prev = NULL;
 
         int cnt = 1;
-        while(cnt < position) {
+        while (cnt < position) {
             prev = curr;
-            curr = curr -> next;
+            curr = curr->next;
             cnt++;
         }
 
-        prev -> next = curr -> next;
-        if(prev -> next == NULL) {
+        prev->next = curr->next;
+        if (prev->next == NULL) {
             tail = prev;
         }
 
-        curr -> next = NULL;
+        curr->next = NULL;
         delete curr;
-
+        Node::size--;
     }
 }
 
 bool isCircularList(Node* tail) {
-
-    if(tail == NULL) {
+    if (tail == NULL) {
         return true;
     }
 
-    Node* temp = tail -> next;
+    Node* temp = tail->next;
 
-    while(temp != NULL && temp != tail) {
-        temp = temp -> next;
+    while (temp != NULL && temp != tail) {
+        temp = temp->next;
     }
 
-    if(temp == tail) {
+    if (temp == tail) {
         return true;
     }
 
     return false;
-
 }
 
 bool detectLoop(Node* head) {
-    if(head == NULL) {
+    if (head == NULL) {
         return false;
     }
 
-    map <Node*, bool> visited;
+    map<Node*, bool> visited;
 
     Node* temp = head;
 
-    while(temp != NULL) {
-        //cycle s present
-        if(visited[temp] == true) {
-            cout << "present on element" << temp -> data << endl;
+    while (temp != NULL) {
+        // cycle s present
+        if (visited[temp] == true) {
+            cout << "present on element" << temp->data << endl;
             return 1;
         }
 
         visited[temp] = true;
-        temp = temp -> next;
-
+        temp = temp->next;
     }
 
     return 0;
-
-
 }
 
+int Node::size = 0;
 
-int main(){
-
-    //create a new node
-    Node *node1 = new Node(10);
+int main() {
+    // create a new node
+    Node* node1 = new Node(10);
     // cout << node1->data << endl;
     // cout << node1->next << endl;
- 
-    //head pointed to node1
+    // cout << node1 << endl;
+
+    // head pointed to node1
     Node* head = node1;
     Node* tail = node1;
+    print(head);
+
+    // cout << "Before calling the function: " << head << endl;
+    insertAtHead(head, 20);
     print(head);
 
     insertAtTail(tail, 12);
@@ -182,25 +182,27 @@ int main(){
     print(head);
     insertAtPosition(head, tail, 4, 22);
     print(head);
+    cout << Node::size << endl;
 
-    cout << "head " << head -> data << endl;
-    cout << "tail " << tail -> data << endl;
+    // cout << "head " << head -> data << endl;
+    // cout << "tail " << tail -> data << endl;
 
-    tail -> next = head -> next;
+    // tail -> next = head -> next;
 
-    // deleteNode(4, head, tail);
-    // print(head);
-    cout << "head " << head -> data << endl;
-    cout << "tail " << tail -> data << endl;
+    deleteNode(1, head, tail);
+    cout << Node::size << endl;
+    // // print(head);
+    // cout << "head " << head -> data << endl;
+    // cout << "tail " << tail -> data << endl;
 
-    cout << tail -> next -> data << endl;
+    // cout << tail -> next -> data << endl;
 
-    if(detectLoop(head)) {
-        cout << "loop is present" << endl;
-    }
-    else{
-        cout << "false" << endl;
-    }
+    // if(detectLoop(head)) {
+    //     cout << "loop is present" << endl;
+    // }
+    // else{
+    //     cout << "false" << endl;
+    // }
 
     /*if(isCircularList(tail)) {
         cout << "circular" << endl;
@@ -208,9 +210,6 @@ int main(){
     else{
         cout << "not circular" << endl;
     }*/
-
-
-
 
     return 0;
 }

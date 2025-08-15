@@ -48,7 +48,7 @@ void reverse(LinkedListNode<int> *&head, LinkedListNode<int> *&curr,
 
 LinkedListNode<int> *reverseLinkedList(LinkedListNode<int>* &head) {
 
-  return reverse1(head);
+  // return reverse1(head);
 
   
   // LinkedListNode<int> *curr = head;
@@ -57,7 +57,7 @@ LinkedListNode<int> *reverseLinkedList(LinkedListNode<int>* &head) {
   // return head;
   
 
-  /*if(head == NULL || head -> next == NULL) {
+  if(head == NULL || head -> next == NULL) {
       return head;
   }
 
@@ -73,7 +73,7 @@ LinkedListNode<int> *reverseLinkedList(LinkedListNode<int>* &head) {
   }
 
   return prev;
-  */
+
 }
 
 void insertAtHead(LinkedListNode<int>* &head, int d) {

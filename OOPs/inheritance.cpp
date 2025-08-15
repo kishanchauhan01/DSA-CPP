@@ -23,6 +23,7 @@ class Male: protected Human {
 
         void sleep() {
             cout << "Male is sleeping" << endl;
+            cout << Human::getAge() << endl;
         }
 
         int getHeight() {

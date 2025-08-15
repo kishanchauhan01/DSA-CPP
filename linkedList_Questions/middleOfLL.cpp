@@ -29,9 +29,36 @@ public:
 };
 */
 
+Node* getMiddle(Node* head) {
+
+    if(head == NULL || head -> next == NULL) {
+        return head;
+    }
+
+    //2 Nodes - needed or not? H.W
+    if(head -> next -> next == NULL) {
+        return head -> next;
+    }
+
+    Node* slow = head;
+    Node* fast = head -> next;
+
+    while(fast != NULL) {
+        fast = fast -> next;
+        if(fast != NULL) {
+            fast = fast -> next;
+        }
+
+        slow = slow -> next;
+    }
+
+    return slow;
+
+}   
+
 int getLength(Node* head) {
     int len = 0;
-    while(head!=0){
+    while(head!=NULL){
         len++;
         head = head -> next;
     }
