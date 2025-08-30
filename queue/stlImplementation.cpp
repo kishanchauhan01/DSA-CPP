@@ -18,6 +18,7 @@ int main() {
     cout << "Size of queue:- " << q.size() << endl;
 
     q.pop();//remove the front
+    
 
     cout << "Size of queue:- " << q.size() << endl;
 

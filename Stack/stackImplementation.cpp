@@ -10,6 +10,7 @@ int main(){
     //push element
     s.push(2);
     s.push(2);
+
     
     
 

@@ -1,6 +1,5 @@
-#include <bits/stdc++.h>
-
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 // https://www.naukri.com/code360/problems/queue-using-array-or-singly-linked-list_2099908

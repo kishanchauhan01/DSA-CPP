@@ -16,7 +16,7 @@ class CircularQueue {
     // stack, and false otherwise.
     bool enqueue(int value) {
         if ((front == 0 && rear == size - 1) ||
-            (rear == (front - 1) % (size - 1))) {
+            (rear == (front - 1 + size) % size)) {
             return false;
         } else if (front == -1) {  // first element to push
             front = rear = 0;
