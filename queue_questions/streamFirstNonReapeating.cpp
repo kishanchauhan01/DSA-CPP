@@ -1,5 +1,6 @@
-#include <bits/stdc++.h>
+// https://www.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream1216/1
 
+#include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
 

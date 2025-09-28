@@ -44,19 +44,19 @@ class kQueue {
         }
 
         // find first free index
-        int index = freeSpot;
+        int index = freeSpot;   
 
         // update freespot
         freeSpot = next[index];
 
-        // check whether
+        // check whether front queue is empty ro not
         if (front[qn - 1] == -1) {
             front[qn - 1] = index;
         } else {
             // link new element to the prev element
             next[rear[qn - 1]] = index;
         }
-
+ 
         // update next
         next[index] = -1;
 
