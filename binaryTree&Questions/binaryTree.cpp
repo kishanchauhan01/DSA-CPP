@@ -169,24 +169,25 @@ int main() {
     Node* root = NULL;
 
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+    // 1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1
     root = buildTree(root);
 
     cout << "level order traversing" << endl;
 
-    levelOrderTraversal(root);
+    // levelOrderTraversal(root);
     // reverseLevelOrderTraversal(root);
 
-    // cout << endl << "Inorder traversal is: " << endl;
-    // inOrder(root);
-    // cout << endl;
+    cout << endl << "Inorder traversal is: " << endl;
+    inOrder(root);
+    cout << endl;
 
-    // cout << endl << "Preorder traversal is: " << endl;
-    // preOrder(root);
-    // cout << endl;
+    cout << endl << "Preorder traversal is: " << endl;
+    preOrder(root);
+    cout << endl;
 
-    // cout << endl << "Postorder traversal is: " << endl;
-    // postOrder(root);
-    // cout << endl;
+    cout << endl << "Postorder traversal is: " << endl;
+    postOrder(root);
+    cout << endl;
 
     return 0;
 }
