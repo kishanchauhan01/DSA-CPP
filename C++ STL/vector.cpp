@@ -37,6 +37,7 @@ int main(){
     }cout << endl;
 
     v.pop_back();
+    
 
     cout << "after pop" << endl;
     for(int i:v) {
