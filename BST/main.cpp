@@ -29,6 +29,8 @@ Node* insertIntoBst(Node* root, int data) {
     else {
         root->left = insertIntoBst(root->left, data);
     }
+
+    return root;
 }
 
 void takeInput(Node*& root) {
@@ -145,6 +147,8 @@ Node* deleteFromBST(Node* root, int val) {
         root->right = deleteFromBST(root->right, val);
         return root;
     }
+
+    return root;
 }
 
 int main() {
@@ -166,8 +170,8 @@ int main() {
 
     // only one node
     // deleteFromBST(root, 15);
-    
-    // both nodes 
+
+    // both nodes
     root = deleteFromBST(root, 10);
 
     cout << endl;

@@ -41,8 +41,8 @@ void mergeSort(int *arr,int s,int e){
 }
 
 int main(){
-    int arr[17] = {43,5,3,5,7,8,89,34,56,23,43,62,73,43,22,23,47};
-    // int arr[6] = {1,25,40,10,2,3};
+    // int arr[17] = {43,5,3,5,7,8,89,34,56,23,43,62,73,43,22,23,47};
+    int arr[6] = {1,25,40,10,2,3};
     int n=sizeof(arr)/sizeof(int);
 
     mergeSort(arr,0,n-1);
